@@ -1,8 +1,5 @@
 public class TvShows extends ServiceCommunicator{
-
-
     private final MyApp userTvShow = new MyApp();
-
     public TvShows(MyApp userTvShow) {
         super("http://api.tvmaze.com/singlesearch/shows?q=" + userTvShow);
     }

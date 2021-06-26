@@ -1,20 +1,25 @@
 public class Music extends ServiceCommunicator{
-    String songTitle;
-    public static MyApp userSong;
-    public Music(String songTitle) {
-        super("https://itunes.apple.com/search?term=" + songTitle + "&limit=1");
-        this.songTitle = songTitle;
+    private static final MyApp userSong = new MyApp();
+    public Music(MyApp userSong) {
+        super("https://itunes.apple.com/search?term=" + userSong + "&limit=1");
     }
-    public static String format() {
-        System.out.println("\n---------- Song Information ----------\n" +
-                "Song Title   | " + userSong + "\n");
-        return null;
+
+    public static void getSong() {
+        System.out.println("********** Your Song Facts **********");
+        Music song = new Music(userSong);
+        System.out.println(song.get());
     }
+
+//    public static String format() {
+//        System.out.println("\n---------- Song Information ----------\n" +
+//                "Song Title   | " + userSong + "\n");
+//        return null;
+//    }
 
     /*
     Main method to test this class
      */
-    public static void main(String[] args) {
-        System.out.println(new Music("formation").get());
+//    public static void main(String[] args) {
+//        System.out.println(new Music("formation").get());
     }
-}
+

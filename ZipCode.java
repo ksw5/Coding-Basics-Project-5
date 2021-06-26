@@ -8,8 +8,8 @@ public class ZipCode extends ServiceCommunicator {
     /*
     Main method to test this class
      */
-    public static void main(String[] argv) {
-        System.out.println(new ZipCode("28211").get());
+//    public static void main(String[] argv) {
+//        System.out.println(new ZipCode("28211").get());
 
     }
-}
+
