@@ -9,10 +9,6 @@ public class ZipCode extends ServiceCommunicator {
         this.zipcode = zipcode;
 
     }
-    public String getZipcode() {
-        return this.serviceURL + this.zipcode;
-    }
-
     /*
     Main method to test this class
      */
