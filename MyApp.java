@@ -1,9 +1,16 @@
-import java.util.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.*;
+import java.util.Scanner;
 
 public class MyApp {
+
+
     public static void main (String[] argv) {
         informationStation();
     }
+
+    
 
     public static void informationStation() {
         String userZipcode;
@@ -26,7 +33,6 @@ public class MyApp {
         userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
 
-            // print all of the answers in string format
         ZipCode.getZip(userZipcode);
         TvShows.getShow(userTvShow);
         Music.getSong(userSong);

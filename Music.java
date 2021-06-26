@@ -1,3 +1,6 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class Music extends ServiceCommunicator{
     static String songTitle;
 
@@ -8,7 +11,10 @@ public class Music extends ServiceCommunicator{
     public static void getSong(String userSong) {
         System.out.println("\n\n********** Your Song Facts **********");
         Music song = new Music("https://itunes.apple.com/search?term=", userSong);
-        System.out.println(song.get());
+            //format json to gson pretty printing
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String prettyJson = gson.toJson(song);
+        System.out.println(prettyJson);
     }
 
 

@@ -44,7 +44,7 @@ public class ServiceCommunicator {
         }
         return urlString;
     }
-    public ServiceCommunicator() {}
+
 
 
 
