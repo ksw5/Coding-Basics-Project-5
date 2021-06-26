@@ -26,11 +26,13 @@ public class MyApp {
         userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
 
+            // print all of the answers in string format
+        ZipCode.getZip();
         TvShows.getShow();
         Music.getSong();
 
     }
-    // print all of the answers in correct format
+
 
 
 }

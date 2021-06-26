@@ -1,11 +1,14 @@
 public class Music extends ServiceCommunicator{
-    private static final MyApp userSong = new MyApp();
+    public static final MyApp userSong = new MyApp();
+    private static String serviceURL = "https://itunes.apple.com/search?term=";
+
     public Music(MyApp userSong) {
-        super("https://itunes.apple.com/search?term=" + userSong + "&limit=1");
+        super( serviceURL + userSong + "&limit=1");
+
     }
 
     public static void getSong() {
-        System.out.println("/n********** Your Song Facts **********");
+        System.out.println("\n\n********** Your Song Facts **********");
         Music song = new Music(userSong);
         System.out.println(song.get());
     }
