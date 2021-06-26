@@ -1,15 +1,13 @@
 public class TvShows extends ServiceCommunicator{
-    String serviceURL;
-    String show;
+    String showTitle;
 
-    public TvShows(String serviceURL, String show) {
-        super(serviceURL + show);
-        this.serviceURL = serviceURL;
-        this.show = show;
+    public TvShows(String showTitle) {
+        super("http://api.tvmaze.com/singlesearch/shows?q=" + showTitle);
+        this.showTitle = showTitle;
     }
 
     public static void main(String[] argv) {
-        System.out.println(new TvShows("http://api.tvmaze.com/singlesearch/shows?q=", "Family+Matters").get());
-        System.out.println(new TvShows("http://api.tvmaze.com/singlesearch/shows?q=", "blackish").get());
+        System.out.println(new TvShows("blackish").get());
+        System.out.println(new TvShows("family+matters").get());
     }
 }
