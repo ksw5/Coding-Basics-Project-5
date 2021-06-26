@@ -5,16 +5,11 @@ public class Music extends ServiceCommunicator{
     }
 
     public static void getSong() {
-        System.out.println("********** Your Song Facts **********");
+        System.out.println("/n********** Your Song Facts **********");
         Music song = new Music(userSong);
         System.out.println(song.get());
     }
 
-//    public static String format() {
-//        System.out.println("\n---------- Song Information ----------\n" +
-//                "Song Title   | " + userSong + "\n");
-//        return null;
-//    }
 
     /*
     Main method to test this class

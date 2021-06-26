@@ -26,7 +26,9 @@ public class MyApp {
         userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
 
+        TvShows.getShow();
         Music.getSong();
+
     }
     // print all of the answers in correct format
 
