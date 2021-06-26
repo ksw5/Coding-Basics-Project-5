@@ -1,22 +1,22 @@
+import java.util.*;
+
 public class MyApp {
   public static void main (String[] argv) {
-      java.util.Scanner userinput;
+      Scanner scanner = new Scanner(System.in);
       String request;
       System.out.println("");
       System.out.println("==========================================");
       System.out.println("Welcome to Kieran's Information Station!!");
       System.out.println("Enter your requests and I will display information on that request!");
       System.out.println("==========================================");
-      while (true) {
-          System.out.print("Would you like information on a zipcode, tv show, or song? >> ");
-          request = scan.next();
+
+      System.out.print("Enter a zipcode >> ");
+      String userZipcode = scanner.nextLine();
+      System.out.print("Enter a tv show (use plus [+] signs instead of spaces) >> ");
+      String userTvShow = scanner.nextLine();
+      System.out.print("Enter a song title (use hyphens [-] instead of spaces) >> ");
+      String userSong = scanner.nextLine();
       }
 
-//      while (true) {
-//          System.out.print("Enter you favorite song>> ");
-//          userinput = new java.util.Scanner(System.in);
-//          String cmd = userinput.next();
-//          System.out.println("You selected " + cmd + ".");
-//      }
-  }
+
 }
