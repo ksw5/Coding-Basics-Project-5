@@ -1,13 +1,14 @@
 public class TvShows extends ServiceCommunicator {
-    public static final MyApp userTvShow = new MyApp();
+    static String showTitle;
 
-    public TvShows(MyApp userTvShow) {
-        super("http://api.tvmaze.com/singlesearch/shows?q=" + userTvShow);
+    public TvShows(String serviceURL, String showTitle) {
+        super(serviceURL + showTitle);
+        TvShows.showTitle = showTitle;
     }
 
     public static void getShow() {
         System.out.println("\n\n********** Your TV Show Facts **********");
-        TvShows show = new TvShows(userTvShow);
+        TvShows show = new TvShows("http://api.tvmaze.com/singlesearch/shows?q=", showTitle);
         System.out.println(show.get());
     /*
     Main method to test this class
