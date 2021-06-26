@@ -45,6 +45,13 @@ public class ServiceCommunicator {
          return urlString;
       }
 
+
+
+
+
+
+
+
 /*
  main method used just to test this class in isolation.  You will learn more about testing in another course
  */
