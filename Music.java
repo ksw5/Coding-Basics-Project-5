@@ -5,12 +5,10 @@ public class Music extends ServiceCommunicator{
         super("https://itunes.apple.com/search?term=" + songTitle + "&limit=1");
         this.songTitle = songTitle;
     }
-    class MyApp {
-
-    }
-    public static void show() {
+    public static String format() {
         System.out.println("\n---------- Song Information ----------\n" +
                 "Song Title   | " + userSong + "\n");
+        return null;
     }
 
     /*

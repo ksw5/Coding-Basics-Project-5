@@ -31,19 +31,20 @@ public class ServiceCommunicator {
         returns a string that captured the output from that service.
  */
     public String get() {
-         String urlString = "";
-         String current;
+        String urlString = "";
+        String current;
 
-         try {
-             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-             while((current = in.readLine()) != null) {
-                 urlString += current;
-             }
-         } catch (IOException iox) {
-             System.err.println("**Error in get().  Cannot read from URL");
-         }
-         return urlString;
-      }
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            while ((current = in.readLine()) != null) {
+                urlString += current;
+            }
+        } catch (IOException iox) {
+            System.err.println("**Error in get().  Cannot read from URL");
+        }
+        return urlString;
+    }
+    public ServiceCommunicator() {}
 
 
 

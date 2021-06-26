@@ -1,10 +1,15 @@
 import java.util.*;
 
 public class MyApp {
-    public static String userZipcode;
-    public static String userTvShow;
-    public static String userSong;
     public static void main (String[] argv) {
+        informationStation();
+    }
+
+    public static void informationStation() {
+        String userZipcode;
+        String userTvShow;
+        String userSong;
+
         Scanner input = new Scanner(System.in);
         System.out.println("");
         System.out.println("==========================================");
@@ -12,13 +17,16 @@ public class MyApp {
         System.out.println("Enter your requests and I will display information on that request!");
         System.out.println("==========================================");
 
+                // take user input for information
         System.out.print("Enter a zipcode >> ");
         userZipcode = input.nextLine();
-        System.out.print("Enter a tv show (use plus [+] signs instead of spaces) >> ");
-        userTvShow = input.nextLine();
-        System.out.print("Enter a song title (use hyphens [-] instead of spaces) >> ");
-        userSong = input.nextLine();
+        System.out.print("Enter a tv show >> ");
+        userTvShow = input.nextLine().replaceAll("\\s", "+");
+        System.out.print("Enter a song title >> ");
+        userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
-        Music.show();
+
+            // print all of the answers in correct format
+        System.out.println(Music.format());
     }
 }
