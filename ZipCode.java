@@ -1,19 +1,14 @@
 public class ZipCode extends ServiceCommunicator {
-    public static final MyApp userZipcode = new MyApp();
-    private static String serviceURL = "https://itunes.apple.com/search?term=";
-
-    public ZipCode(MyApp userZipcode) {
-        super(serviceURL + userZipcode);
-
+    static String zipInput;
+    public ZipCode(String serviceURL, String zipInput) {
+        super(serviceURL + zipInput);
+        ZipCode.zipInput = zipInput;
     }
-
-    public static void getZip() {
+    public static void getZip(String userZipcode) {
         System.out.println("\n\n********** Your Zipcode Facts **********");
-        ZipCode zip = new ZipCode(userZipcode);
+        ZipCode zip = new ZipCode("http://api.zippopotam.us/us/", userZipcode);
         System.out.println(zip.get());
     }
-
-
 
 
 

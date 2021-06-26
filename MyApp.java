@@ -27,9 +27,9 @@ public class MyApp {
         input.close();
 
             // print all of the answers in string format
-        ZipCode.getZip();
+        ZipCode.getZip(userZipcode);
         TvShows.getShow(userTvShow);
-        Music.getSong();
+        Music.getSong(userSong);
 
     }
 
