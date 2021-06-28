@@ -1,9 +1,8 @@
 public class ZipCode extends ServiceCommunicator {
     static String userZipcode;
-
     public ZipCode(String serviceURL, String userZipcode) {
         super(serviceURL + userZipcode);
-        MyApp.userZipcode = userZipcode;
+        ZipCode.userZipcode = userZipcode;
 
     }
 

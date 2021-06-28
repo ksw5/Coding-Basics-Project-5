@@ -1,19 +1,12 @@
 import java.util.Scanner;
 
 public class MyApp {
-
-
-    public static String userZipcode;
-
     public static void main (String[] argv) {
         informationStation();
     }
 
-    
-
     public static void informationStation() {
         Scanner input = new Scanner(System.in);
-        System.out.println("");
         System.out.println("==========================================");
         System.out.println("Welcome to Kieran's Information Station!!");
         System.out.println("Enter your requests and I will display information on that request!");
