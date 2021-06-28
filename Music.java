@@ -2,14 +2,17 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class Music extends ServiceCommunicator{
-    static String songTitle;
+    public static final MyApp userSong = new MyApp();
+    private static String serviceURL = "https://itunes.apple.com/search?term=";
 
-    public Music(String serviceURL, String songTitle) {
-        super( serviceURL + songTitle + "&limit=1");
-        Music.songTitle = songTitle;
+    public Music(MyApp userSong) {
+        super( serviceURL + userSong + "&limit=1");
+
     }
-    public static void getSong(String userSong) {
+
+    public static void getSong() {
         System.out.println("\n\n********** Your Song Facts **********");
+<<<<<<< HEAD
         Music song = new Music("https://itunes.apple.com/search?term=", userSong);
             //format json to gson pretty printing
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -19,6 +22,13 @@ public class Music extends ServiceCommunicator{
 
 
 
+=======
+        Music song = new Music(userSong);
+        System.out.println(song.get());
+    }
+
+
+>>>>>>> parent of 062143e (updated rest of classes with new code fix)
     /*
     Main method to test this class
      */

@@ -33,9 +33,14 @@ public class MyApp {
         userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
 
+<<<<<<< HEAD
         ZipCode.getZip(userZipcode);
+=======
+            // print all of the answers in string format
+        ZipCode.getZip();
+>>>>>>> parent of 062143e (updated rest of classes with new code fix)
         TvShows.getShow(userTvShow);
-        Music.getSong(userSong);
+        Music.getSong();
 
     }
 
