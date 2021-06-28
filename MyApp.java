@@ -1,10 +1,9 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.*;
 import java.util.Scanner;
 
 public class MyApp {
 
+
+    public static String userZipcode;
 
     public static void main (String[] argv) {
         informationStation();
@@ -13,10 +12,6 @@ public class MyApp {
     
 
     public static void informationStation() {
-        String userZipcode;
-        String userTvShow;
-        String userSong;
-
         Scanner input = new Scanner(System.in);
         System.out.println("");
         System.out.println("==========================================");
@@ -26,21 +21,18 @@ public class MyApp {
 
                 // take user input for information
         System.out.print("Enter a zipcode >> ");
-        userZipcode = input.nextLine();
+        String userZipcode = input.nextLine();
         System.out.print("Enter a tv show >> ");
-        userTvShow = input.nextLine().replaceAll("\\s", "+");
+        String userTvShow = input.nextLine().replaceAll("\\s", "+");
         System.out.print("Enter a song title >> ");
-        userSong = input.nextLine().replaceAll("\\s", "-");
+        String userSong = input.nextLine().replaceAll("\\s", "-");
         input.close();
 
-<<<<<<< HEAD
-        ZipCode.getZip(userZipcode);
-=======
+
             // print all of the answers in string format
-        ZipCode.getZip();
->>>>>>> parent of 062143e (updated rest of classes with new code fix)
+        ZipCode.getZip(userZipcode);
         TvShows.getShow(userTvShow);
-        Music.getSong();
+        Music.getSong(userSong);
 
     }
 
